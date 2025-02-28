@@ -37,6 +37,8 @@ endif()
 add_definitions(-DSDL_MAIN_HANDLED)
 
 add_executable(PolyPSR1 main.cpp
+        border.cpp border.h
+        Player.cpp Player.h
 )
 
 target_link_libraries(PolyPSR1 ${SDL_IMAGE_STATIC_LIB} ${SDL_STATIC_LIB} ${SDL_MAIN_LIB} winmm Cfgmgr32 imm32 Version setupapi C:/msys64/mingw64/x86_64-w64-mingw32/lib/libwinpthread.a)

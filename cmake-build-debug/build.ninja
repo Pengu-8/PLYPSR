@@ -57,6 +57,22 @@ build CMakeFiles/PolyPSR1.dir/main.cpp.obj: CXX_COMPILER__PolyPSR1_unscanned_Deb
   OBJECT_DIR = CMakeFiles\PolyPSR1.dir
   OBJECT_FILE_DIR = CMakeFiles\PolyPSR1.dir
 
+build CMakeFiles/PolyPSR1.dir/border.cpp.obj: CXX_COMPILER__PolyPSR1_unscanned_Debug C$:/Users/123ye/CLionProjects/PolyPSR1/border.cpp || cmake_object_order_depends_target_PolyPSR1
+  DEFINES = -DSDL_MAIN_HANDLED
+  DEP_FILE = CMakeFiles\PolyPSR1.dir\border.cpp.obj.d
+  FLAGS = -static-libgcc -static-libstdc++ -static -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Program -IC:/Users/123ye/CLionProjects/PolyPSR1/Files -IC:/Users/123ye/CLionProjects/PolyPSR1/( -IC:/Users/123ye/CLionProjects/PolyPSR1/x86 -IC:/Users/123ye/CLionProjects/PolyPSR1/) -I/Windows -IC:/Users/123ye/CLionProjects/PolyPSR1/Kits/10/Include/10.0.22621.0/ucrt -IC:/Users/123ye/CLionProjects/PolyPSR1/Kits/10/Include/10.0.22621.0/um -IC:/Downloads/SDL/SDL2-devel-2.30.9-mingw/SDL2-2.30.9/x86_64-w64-mingw32/include/SDL2 -IC:/Downloads/SDL/SDL2_image-2.8.2/x86_64-w64-mingw32/include/SDL2
+  OBJECT_DIR = CMakeFiles\PolyPSR1.dir
+  OBJECT_FILE_DIR = CMakeFiles\PolyPSR1.dir
+
+build CMakeFiles/PolyPSR1.dir/Player.cpp.obj: CXX_COMPILER__PolyPSR1_unscanned_Debug C$:/Users/123ye/CLionProjects/PolyPSR1/Player.cpp || cmake_object_order_depends_target_PolyPSR1
+  DEFINES = -DSDL_MAIN_HANDLED
+  DEP_FILE = CMakeFiles\PolyPSR1.dir\Player.cpp.obj.d
+  FLAGS = -static-libgcc -static-libstdc++ -static -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Program -IC:/Users/123ye/CLionProjects/PolyPSR1/Files -IC:/Users/123ye/CLionProjects/PolyPSR1/( -IC:/Users/123ye/CLionProjects/PolyPSR1/x86 -IC:/Users/123ye/CLionProjects/PolyPSR1/) -I/Windows -IC:/Users/123ye/CLionProjects/PolyPSR1/Kits/10/Include/10.0.22621.0/ucrt -IC:/Users/123ye/CLionProjects/PolyPSR1/Kits/10/Include/10.0.22621.0/um -IC:/Downloads/SDL/SDL2-devel-2.30.9-mingw/SDL2-2.30.9/x86_64-w64-mingw32/include/SDL2 -IC:/Downloads/SDL/SDL2_image-2.8.2/x86_64-w64-mingw32/include/SDL2
+  OBJECT_DIR = CMakeFiles\PolyPSR1.dir
+  OBJECT_FILE_DIR = CMakeFiles\PolyPSR1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PolyPSR1
@@ -65,7 +81,7 @@ build CMakeFiles/PolyPSR1.dir/main.cpp.obj: CXX_COMPILER__PolyPSR1_unscanned_Deb
 #############################################
 # Link the executable PolyPSR1.exe
 
-build PolyPSR1.exe: CXX_EXECUTABLE_LINKER__PolyPSR1_Debug CMakeFiles/PolyPSR1.dir/main.cpp.obj | C$:/Downloads/SDL/SDL2_image-2.8.2/x86_64-w64-mingw32/lib/libSDL2_image.a C$:/Downloads/SDL/SDL2-devel-2.30.9-mingw/SDL2-2.30.9/x86_64-w64-mingw32/lib/libSDL2.a C$:/Downloads/SDL/SDL2-devel-2.30.9-mingw/SDL2-2.30.9/x86_64-w64-mingw32/lib/libSDL2main.a C$:/msys64/mingw64/x86_64-w64-mingw32/lib/libwinpthread.a
+build PolyPSR1.exe: CXX_EXECUTABLE_LINKER__PolyPSR1_Debug CMakeFiles/PolyPSR1.dir/main.cpp.obj CMakeFiles/PolyPSR1.dir/border.cpp.obj CMakeFiles/PolyPSR1.dir/Player.cpp.obj | C$:/Downloads/SDL/SDL2_image-2.8.2/x86_64-w64-mingw32/lib/libSDL2_image.a C$:/Downloads/SDL/SDL2-devel-2.30.9-mingw/SDL2-2.30.9/x86_64-w64-mingw32/lib/libSDL2.a C$:/Downloads/SDL/SDL2-devel-2.30.9-mingw/SDL2-2.30.9/x86_64-w64-mingw32/lib/libSDL2main.a C$:/msys64/mingw64/x86_64-w64-mingw32/lib/libwinpthread.a
   FLAGS = -static-libgcc -static-libstdc++ -static -g
   LINK_LIBRARIES = C:/Downloads/SDL/SDL2_image-2.8.2/x86_64-w64-mingw32/lib/libSDL2_image.a  C:/Downloads/SDL/SDL2-devel-2.30.9-mingw/SDL2-2.30.9/x86_64-w64-mingw32/lib/libSDL2.a  C:/Downloads/SDL/SDL2-devel-2.30.9-mingw/SDL2-2.30.9/x86_64-w64-mingw32/lib/libSDL2main.a  -lwinmm  -lCfgmgr32  -limm32  -lVersion  -lsetupapi  C:/msys64/mingw64/x86_64-w64-mingw32/lib/libwinpthread.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/Program   -LC:/Users/123ye/CLionProjects/PolyPSR1/Files   -LC:/Users/123ye/CLionProjects/PolyPSR1/(   -LC:/Users/123ye/CLionProjects/PolyPSR1/x86   -LC:/Users/123ye/CLionProjects/PolyPSR1/)   -L/Windows   -LC:/Users/123ye/CLionProjects/PolyPSR1/Kits/10/Lib/10.0.22621.0/um/x64   -LC:/msys64/mingw64/lib
