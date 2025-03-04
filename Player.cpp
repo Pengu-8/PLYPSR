@@ -26,7 +26,7 @@ void Player::move() {
     }
 
     if (keyStates[SDL_SCANCODE_A] && not pressed)  {
-        if (location_x - width_distance > 0) direction_x -= width_distance , location_x-=width_distance , pressed = true;
+        if (location_x - width_distance >= 0) direction_x -= width_distance , location_x-=width_distance , pressed = true;
     }
     // SDL_PollEvent(&event);
     //
@@ -52,7 +52,7 @@ void Player::move() {
     // }
 
     if (keyStates[SDL_SCANCODE_W] && not pressed)  {
-        if (location_y - height_distance > 0) direction_y -= height_distance,location_y-=height_distance,pressed = true;
+        if (location_y - height_distance >= 0) direction_y -= height_distance,location_y-=height_distance,pressed = true;
     }
 
     if (keyStates[SDL_SCANCODE_S] && not pressed)  {

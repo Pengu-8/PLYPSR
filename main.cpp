@@ -15,14 +15,16 @@ int main() {
     }
     SDL_DisplayMode DM;
     SDL_GetCurrentDisplayMode(0, &DM);
-    int window_width = DM.w;
-    int window_height= DM.h;
+    // int window_width = DM.w;
+    // int window_height= DM.h;
+    int window_width = 1600;
+    int window_height = 800;
     SDL_Window* window = SDL_CreateWindow(
         "Game",
         SDL_WINDOWPOS_UNDEFINED,
         SDL_WINDOWPOS_UNDEFINED,
         window_width,
-        window_height-50,
+        window_height,
         SDL_WINDOW_OPENGL);
     if (window == nullptr) {std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;}
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
@@ -34,6 +36,11 @@ int main() {
 
     Border border(amount,window_width,window_height);
     Player player(amount,window_width,window_height);
+
+    for (int i = 0; i < amount*amount; i++) {
+        std::cout << border.location_square[i].x << " "<< border.location_square[i].y << std::endl;
+
+    }
 
     SDL_Event event;
     bool running = true;
