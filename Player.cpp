@@ -18,38 +18,31 @@ Player::Player(int amount, int window_width, int window_height):window_height(wi
 }
 
 
-void Player::move() {
+void Player::move(SDL_Event event) {
     if (keyStates[SDL_SCANCODE_A] || keyStates[SDL_SCANCODE_D] || keyStates[SDL_SCANCODE_W] || keyStates[SDL_SCANCODE_S]) {
     }
     else if (keyStates[SDL_SCANCODE_RETURN]) {
         pressed = false;
     }
+    if (event.type == SDL_MOUSEBUTTONDOWN) {
+        std::cout << "button press" << std::endl;
+        if (event.button.button == SDL_BUTTON_LEFT) {
+            std::cout << "left button pressed"<<std::endl;
+        }
+        else if (event.button.button == SDL_BUTTON_RIGHT) {
+            std::cout << "right button pressed"<<std::endl;
+        }
+    }
+    else if (event.type == SDL_MOUSEBUTTONUP) {
+        std::cout << "button release"<<std::endl;
+    }
 
     if (keyStates[SDL_SCANCODE_A] && not pressed)  {
         if (location_x - width_distance >= 0) direction_x -= width_distance , location_x-=width_distance , pressed = true;
     }
-    // SDL_PollEvent(&event);
-    //
-    // if (event.type == SDL_KEYDOWN) {
-    //     if (event.key.keysym.scancode == SDL_SCANCODE_D) {
-    //         if (location_x + width_distance < window_width) {
-    //             std::cout << location_x + width_distance << " " << window_width << std::endl;
-    //             location_x += width_distance;
-    //             pressed = true;
-    //         }
-    //     }
-    // }
 
     if (keyStates[SDL_SCANCODE_D] && not pressed)
         if (location_x + width_distance < window_width) direction_x += width_distance, location_x+=width_distance,pressed = true;
-        // {
-        // if (location_x + width_distance < window_width) {
-        //     std::cout << location_x + width_distance << " " << window_width << std::endl;
-        //     location_x += width_distance;
-        //     pressed = true;
-        // }
-
-    // }
 
     if (keyStates[SDL_SCANCODE_W] && not pressed)  {
         if (location_y - height_distance >= 0) direction_y -= height_distance,location_y-=height_distance,pressed = true;

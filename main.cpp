@@ -51,7 +51,7 @@ int main() {
             running = false;
         }
         if (SDL_GetTicks64() % tick_speed == 0) {
-            player.move();
+            player.move(event);
         }
         SDL_SetRenderDrawColor(renderer,154, 200, 254,100);
         SDL_RenderClear(renderer);

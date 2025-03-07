@@ -24,7 +24,7 @@ public:
     const Uint8* keyStates = SDL_GetKeyboardState(nullptr);
     SDL_Rect rect{};
     Player(int amount, int window_width, int window_height);
-    void move();
+    void move(SDL_Event event);
 };
 
 
