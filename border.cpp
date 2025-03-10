@@ -25,10 +25,10 @@ Border::Border(int amount, int window_width, int window_height) {
         }
         // location_square.push_back(SDL_Rect{ window_width*i/amount/2, (window_height*i/amount/2)});
     }
-
 }
 
 
-// void Border::Number_border(int amount) {
 
+// void Border::Number_border(int amount) {
+//
 // }
