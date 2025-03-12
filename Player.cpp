@@ -9,14 +9,14 @@
 #include <ostream>
 #include <vector>
 
-Player::Player(int amount, int window_width, int window_height, std::vector<SDL_Rect> location_square):window_height(window_height),window_width(window_width),
+Player::Player(int amount, int window_width, int window_height, std::vector<std::vector<SDL_Rect>> location_square):window_height(window_height),window_width(window_width),
                                                                                                        width_distance(window_width/amount),height_distance(window_height/amount),location_square(location_square) {
     rect.w = 50;
     rect.h = 50;
     // rect.x = (window_width/amount/2)-(rect.w/2);
     // rect.y = (window_height/amount/2)-(rect.h/2);
-    rect.x = location_square[location_x].x;
-    rect.y = location_square[location_y].h;
+    rect.x = location_square[location_y][location_x].x;
+    rect.y = location_square[location_y][location_x].y;
     std::cout << width_distance << " "<< height_distance << " " << window_width << " " << window_height << std::endl;
 }
 
@@ -44,7 +44,7 @@ void Player::move(SDL_Event event) {
         // if (location_x - width_distance >= 0) direction_x -= width_distance , location_x-=width_distance , pressed = true;
         if (location_x - direction_x >= 0) {
             location_x -= direction_x;
-            rect.x = location_square[location_x].x;
+            rect.x = location_square[location_y][location_x].x;
         }
     }
 
@@ -52,7 +52,7 @@ void Player::move(SDL_Event event) {
         // if (location_x + width_distance < window_width) direction_x += width_distance, location_x+=width_distance,pressed = true;
         if (location_x + direction_x < 8) {
             location_x += direction_x;
-            rect.x = location_square[location_x].x;
+            rect.x = location_square[location_y][location_x].x;
         }
 
     if (keyStates[SDL_SCANCODE_W] && not pressed)  {

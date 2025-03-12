@@ -22,11 +22,11 @@ public:
     int height_distance;
     int window_width;
     int window_height;
-    std::vector<SDL_Rect> location_square;
+    std::vector<std::vector<SDL_Rect>> location_square;
 
     const Uint8* keyStates = SDL_GetKeyboardState(nullptr);
     SDL_Rect rect{};
-    Player(int amount, int window_width, int window_height, std::vector<SDL_Rect> location_square);
+    Player(int amount, int window_width, int window_height, std::vector<std::vector<SDL_Rect>> location_square);
     void move(SDL_Event event);
 };
 

@@ -37,9 +37,15 @@ int main() {
     Border border(amount,window_width,window_height);
     Player player(amount,window_width,window_height,border.location_square);
 
-    for (int i = 0; i < amount*amount; i++) {
-        std::cout << border.location_square[i].x << " "<< border.location_square[i].y << std::endl;
-
+    // for (int i = 0; i < amount*amount; i++) {
+    //     std::cout << border.location_square[i].x << " "<< border.location_square[i].y << std::endl;
+    //
+    // }
+    for (int i = 0; i < amount; i++) {
+        for (int j = 0; j < amount; j++) {
+            std::cout << border.location_square[i][j].x << " "<< border.location_square[i][j].y << std::endl;
+            // location_square[0].push_back(SDL_Rect{ window_width*j/amount/2, (window_height*i/amount/2)});
+        }
     }
 
     SDL_Event event;
